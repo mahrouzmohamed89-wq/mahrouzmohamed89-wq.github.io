@@ -116,12 +116,11 @@
         "en": "Optional internet for covers and reviews"
       }
     ],
-    "download": {
+"download": {
       "enabled": true,
-      "api": "api/latest.json",
-      "url": "/download",
-      "file": "PixelApp-Setup-1.0.0.exe",
-      "download": "https://github.com/mahrouzmohamed89-wq/pixelapp/releases/download/v1.0.0/PixelApp-Setup-1.0.0.exe"
+      "api": "/api/latest.json",
+      "url": "https://github.com/mahrouzmohamed89-wq/pixelapp/releases/download/v1.0.0/PixelApp-Setup-1.0.0.exe",
+      "file": "PixelApp-Setup-1.0.0.exe"
     }
   }
 }
