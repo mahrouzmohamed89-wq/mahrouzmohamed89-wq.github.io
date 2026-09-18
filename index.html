@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'"
+    />
+    <title>PixelTeam - نصنع تطبيقات كاملة</title>
+    <meta
+      name="description"
+      content="PixelTeam فريق تطوير تطبيقات. نبني منتجاتنا من الفكرة إلى الإصدار، ومنها PixelApp مشغّل الألعاب لويندوز."
+    />
+    <meta name="theme-color" content="#0b1224" />
+    <meta name="author" content="PixelTeam" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="PixelTeam - نصنع تطبيقات كاملة" />
+    <meta property="og:description" content="فريق تطوير تطبيقات. استعرض مشاريعنا وحمّلها." />
+    <meta property="og:image" content="/img/og.png" />
+    <link rel="icon" href="/img/favicon.png" />
+    <link rel="apple-touch-icon" href="/img/logo.png" />
+    <link rel="stylesheet" href="/vendor/nes.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body data-page="home">
+    <a class="skip-link" href="#main" data-i18n="nav.skip">تخطَّ إلى المحتوى</a>
+    <div class="bg-layer" aria-hidden="true"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <header class="nav" id="siteNav">
+      <a class="brand" href="/">
+        <img src="/img/logo.png" alt="PixelTeam" class="brand__mark" />
+        <span class="brand__name pixel">PixelTeam</span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="/" class="is-active" data-nav="home" aria-current="page" data-i18n="nav.home">الرئيسية</a>
+        <a href="/projects" data-nav="projects" data-i18n="nav.projects">المشاريع</a>
+        <a href="#about" data-nav="about" data-i18n="nav.about">عن الفريق</a>
+        <a href="/projects" class="nav__links__cta" data-i18n="nav.cta">استعرض المشاريع</a>
+      </nav>
+      <div class="nav__actions">
+        <button type="button" class="lang-toggle pixel" id="langToggle" aria-label="Switch language">EN</button>
+        <a class="nes-btn is-primary nav__cta" href="/projects" data-i18n="nav.cta">استعرض المشاريع</a>
+        <button
+          type="button"
+          class="nav__toggle pixel"
+          id="navToggle"
+          aria-expanded="false"
+          data-i18n-aria="nav.menu"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="hero__inner">
+          <div class="hero__badge" data-i18n="home.badge">فريق تطوير برمجيات</div>
+          <h1 class="hero__title pixel">PixelTeam</h1>
+          <p class="hero__tagline" data-i18n="home.tagline">من الفكرة إلى الإصدار.</p>
+          <p class="hero__sub" data-i18n="home.sub">
+            نبني تطبيقات سطح مكتب كاملة — تصميم، برمجة، وواجهات عربية. كل مشروع ننشره تجده موثّقًا
+            بالصور ووصف كامل وزر تحميل مباشر.
+          </p>
+          <div class="hero__actions">
+            <a class="nes-btn is-primary btn-lg" href="/projects" data-i18n="nav.cta">
+              استعرض المشاريع
+            </a>
+            <a class="nes-btn btn-lg" href="#about" data-i18n="home.aboutCta">تعرّف علينا</a>
+          </div>
+          <p class="hero__meta">
+            <span class="pixel" id="heroProjectCount">—</span>
+            <span data-i18n="home.metaProjects">مشروع منشور</span>
+            <span class="dot">•</span>
+            <span data-i18n="home.metaPlatform">لويندوز 10/11</span>
+          </p>
+        </div>
+        <div class="hero__art">
+          <img src="/img/app/theme-neon.png" alt="واجهة أحد مشاريع PixelTeam" />
+        </div>
+      </section>
+
+      <section class="stats">
+        <div class="stat">
+          <span class="stat__num pixel" id="statProjects">—</span>
+          <span class="stat__label" data-i18n="home.stat.projects">مشروع منشور</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num pixel">6</span>
+          <span class="stat__label" data-i18n="home.stat.themes">ثيمات بصرية</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num pixel">4</span>
+          <span class="stat__label" data-i18n="home.stat.langs">لغات واجهة</span>
+        </div>
+        <div class="stat">
+          <span class="stat__num pixel">100%</span>
+          <span class="stat__label" data-i18n="home.stat.local">بيانات محلية</span>
+        </div>
+      </section>
+
+      <div class="ticker pixel" aria-hidden="true">
+        <div class="ticker__track" id="tickerTrack"></div>
+      </div>
+
+      <section class="section" id="work">
+        <h2 class="section__title" data-i18n="home.projectsTitle">مشاريعنا</h2>
+        <p class="section__lead" data-i18n="home.projectsLead">
+          كل مشروع له صفحة كاملة بالصور والوصف والمواصفات والتحميل.
+        </p>
+        <div class="projects-grid" id="featuredProjects">
+          <p class="empty-note" data-i18n="common.loading">جارٍ التحميل…</p>
+        </div>
+        <div class="section__more">
+          <a class="nes-btn is-primary" href="/projects" data-i18n="home.allProjects">كل المشاريع</a>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <h2 class="section__title" data-i18n="about.title">عن PixelTeam</h2>
+        <p class="section__lead" data-i18n="about.lead">
+          فريق صغير يهتم بالتفاصيل: منتجات تعمل بسلاسة، بواجهة عربية أنيقة، وبخصوصية كاملة.
+        </p>
+        <div class="cards">
+          <article class="nes-container is-dark card">
+            <i class="nes-icon star is-medium card__icon"></i>
+            <h3 data-i18n="about.quality.title">جودة قبل السرعة</h3>
+            <p data-i18n="about.quality.body">
+              نختبر كل إصدار على أجهزة حقيقية قبل النشر، ونعتمد معايير ثابتة للتصميم والكود.
+            </p>
+          </article>
+          <article class="nes-container is-dark card">
+            <i class="nes-icon trophy is-medium card__icon"></i>
+            <h3 data-i18n="about.perf.title">أداء خفيف</h3>
+            <p data-i18n="about.perf.body">
+              تطبيقات سريعة تفتح فورًا، تستهلك موارد أقل، وتعمل حتى بدون اتصال بالإنترنت.
+            </p>
+          </article>
+          <article class="nes-container is-dark card">
+            <i class="nes-icon icon-shield is-medium card__icon"></i>
+            <h3 data-i18n="about.privacy.title">خصوصية بالكامل</h3>
+            <p data-i18n="about.privacy.body">
+              لا نجمع بياناتك ولا نرفعها. كل شيء يبقى على جهازك، وهذا مبدأ ثابت في كل مشاريعنا.
+            </p>
+          </article>
+          <article class="nes-container is-dark card">
+            <i class="nes-icon heart is-medium card__icon"></i>
+            <h3 data-i18n="about.arabic.title">عربي أولًا</h3>
+            <p data-i18n="about.arabic.body">
+              واجهات تدعم العربية و RTL بشكل أصلي، مع إمكانية التبديل للإنجليزية والفرنسية والإسبانية.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--support" id="support">
+        <h2 class="section__title" data-i18n="support.title">ادعم PixelTeam</h2>
+        <p class="section__lead" data-i18n="support.lead">
+          تطبيقاتنا مجانية دائمًا. إذا أعجبك عملنا، ادعمنا بأي وسيلة تناسبك — كل دعم يساعدنا على
+          الاستمرار وإطلاق المزيد.
+        </p>
+        <div class="support-grid" data-i18n-aria="support.methods">
+          <a class="support-card support-card--paypal" data-support-link="paypal" href="#" rel="noopener" target="_blank" aria-label="PayPal">
+            <span class="support-card__tile" aria-hidden="true">
+              <img class="support-card__logo" src="/img/support/paypal.svg" alt="" />
+            </span>
+            <span class="support-card__body">
+              <span class="support-card__name pixel">PayPal</span>
+              <span class="support-card__hint" data-i18n="support.paypal.hint">تحويل آمن وسريع</span>
+            </span>
+            <span class="support-card__status" data-support-status data-i18n="support.soon" hidden>قريبًا</span>
+          </a>
+          <a class="support-card support-card--redot" data-support-link="redot" href="#" rel="noopener" target="_blank" aria-label="Redot Pay">
+            <span class="support-card__tile" aria-hidden="true">
+              <img class="support-card__logo" src="/img/support/redot.png" alt="" />
+            </span>
+            <span class="support-card__body">
+              <span class="support-card__name pixel">Redot Pay</span>
+              <span class="support-card__hint" data-i18n="support.redot.hint">محفظة دولية سهلة</span>
+            </span>
+            <span class="support-card__status" data-support-status data-i18n="support.soon" hidden>قريبًا</span>
+          </a>
+          <a class="support-card support-card--binance" data-support-link="binance" href="#" rel="noopener" target="_blank" aria-label="Binance">
+            <span class="support-card__tile" aria-hidden="true">
+              <img class="support-card__logo" src="/img/support/binance.svg" alt="" />
+            </span>
+            <span class="support-card__body">
+              <span class="support-card__name pixel">Binance</span>
+              <span class="support-card__hint" data-i18n="support.binance.hint">عملات رقمية — USDT وغيرها</span>
+            </span>
+            <span class="support-card__status" data-support-status data-i18n="support.soon" hidden>قريبًا</span>
+          </a>
+          <a class="support-card support-card--wise" data-support-link="wise" href="#" rel="noopener" target="_blank" aria-label="Wise">
+            <span class="support-card__tile" aria-hidden="true">
+              <img class="support-card__logo" src="/img/support/wise.svg" alt="" />
+            </span>
+            <span class="support-card__body">
+              <span class="support-card__name pixel">Wise</span>
+              <span class="support-card__hint" data-i18n="support.wise.hint">تحويلات بنكية دولية</span>
+            </span>
+            <span class="support-card__status" data-support-status data-i18n="support.soon" hidden>قريبًا</span>
+          </a>
+        </div>
+        <div class="perks" id="supportPerks">
+          <div class="perks__head">
+            <i class="nes-icon trophy is-large perks__icon" aria-hidden="true"></i>
+            <div>
+              <h3 class="perks__title pixel" data-i18n="support.perksTitle">مميزات الداعمين</h3>
+              <p class="perks__lead" data-i18n="support.perksLead">تقدير بسيط لكل من يدعمنا</p>
+            </div>
+          </div>
+          <ul class="perks__list">
+            <li data-i18n="support.perk.early">تحديثات مبكرة قبل الجميع — جرّب كل إصدار أول بأول.</li>
+            <li data-i18n="support.perk.voice">اقترح الميزات وصوّت على ما نطوّره بعد.</li>
+            <li data-i18n="support.perk.honor">اسمك في قائمة الداعمين هنا في الموقع.</li>
+            <li data-i18n="support.perk.support">تواصل مباشر لملاحظاتك واقتراحاتك.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section cta-band">
+        <div class="nes-container is-dark cta-band__card">
+          <h2 data-i18n="home.ctaTitle">جاهز تجرّب مشاريعنا؟</h2>
+          <p data-i18n="home.ctaSub">اختر مشروعًا من القائمة، شاهد صوره ووصفه، وحمّله مباشرة.</p>
+          <a class="nes-btn is-primary btn-lg" href="/projects" data-i18n="nav.cta">استعرض المشاريع</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="footer__watermark pixel" aria-hidden="true">PixelTeam</span>
+      <div class="footer__grid">
+        <div class="footer__col footer__col--brand">
+          <a class="footer__brand" href="/">
+            <img src="/img/logo.png" alt="PixelTeam" class="footer__mark" />
+            <span class="pixel">PixelTeam</span>
+          </a>
+          <p class="footer__about" data-i18n="footer.about">
+            استوديو صغير يبني تطبيقات كاملة — من الفكرة والتصميم إلى الإصدار، بواجهات عربية أصلية.
+          </p>
+        </div>
+        <nav class="footer__col" data-i18n-aria="footer.explore">
+          <h3 class="footer__title pixel" data-i18n="footer.explore">استكشف</h3>
+          <a href="/" data-i18n="nav.home">الرئيسية</a>
+          <a href="/projects" data-i18n="nav.projects">المشاريع</a>
+          <a href="/#about" data-i18n="nav.about">عن الفريق</a>
+          <a href="/#support" data-i18n="footer.support">ادعمنا</a>
+        </nav>
+        <nav class="footer__col" data-i18n-aria="footer.product">
+          <h3 class="footer__title pixel" data-i18n="footer.product">المنتج</h3>
+          <a href="/projects/pixelapp" data-i18n="footer.pixelapp">PixelApp</a>
+          <a href="/projects/pixelapp" data-i18n="footer.download">التحميل</a>
+          <a href="/#work" data-i18n="footer.features">الميزات</a>
+        </nav>
+        <div class="footer__col footer__col--cta">
+          <h3 class="footer__title pixel" data-i18n="footer.stay">ابقَ على اطلاع</h3>
+          <p class="footer__cta-text" data-i18n="footer.ctaText">
+            أحدث مشاريعنا وإصداراتنا في مكان واحد.
+          </p>
+          <a class="footer__cta" href="/projects" data-i18n="nav.cta">استعرض المشاريع</a>
+          <div class="footer__release" id="footerRelease" hidden>
+            <span class="footer__release-label" data-i18n="footer.latest">أحدث إصدار</span>
+            <a class="footer__release-card" id="footerReleaseLink" href="/projects/pixelapp">
+              <span class="footer__release-name pixel" id="footerReleaseName">PixelApp</span>
+              <span class="footer__release-meta" id="footerReleaseMeta">-</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__legal">
+          <p class="footer__copy" data-i18n="footer.copy">© 2026 PixelTeam. جميع الحقوق محفوظة.</p>
+          <p class="footer__made" data-i18n="footer.made">صُنع بشغف — بكسل بكسل.</p>
+        </div>
+        <nav class="footer__langs" data-i18n-aria="footer.language">
+          <span class="footer__langs-label" data-i18n="footer.language">اللغة</span>
+          <button type="button" class="footer__lang" data-lang="ar">العربية</button>
+          <span class="footer__langs-sep" aria-hidden="true">/</span>
+          <button type="button" class="footer__lang" data-lang="en">English</button>
+        </nav>
+        <div class="footer__utilities">
+          <a class="footer__status" href="/">
+            <span class="footer__status-dot" aria-hidden="true"></span>
+            <span data-i18n="footer.status">الخدمة تعمل</span>
+          </a>
+          <button type="button" class="footer__top js-to-top" data-i18n="common.top">للأعلى</button>
+        </div>
+      </div>
+      <p class="footer__note" data-i18n="footer.note">
+        جميع الأسماء التجارية والمحتوى المذكور في صفحات المشاريع مملوكة لأصحابها.
+      </p>
+    </footer>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>

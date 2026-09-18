@@ -1,0 +1,127 @@
+{
+  "studio": "PixelTeam",
+  "project": {
+    "id": "pixelapp",
+    "name": "PixelApp",
+    "accent": "#e87ab9",
+    "featured": true,
+    "categoryKey": "windows",
+    "platforms": [
+      "Windows 10/11"
+    ],
+    "releasedAt": "2026-09-01",
+    "version": "1.0.0",
+    "category": {
+      "ar": "تطبيق ويندوز",
+      "en": "Windows app"
+    },
+    "status": {
+      "ar": "متاح للتحميل",
+      "en": "Available"
+    },
+    "statusType": "stable",
+    "tagline": {
+      "ar": "مشغّل ألعاب بواجهة سينمائية يجمع مكتبتك كلها في مكان واحد.",
+      "en": "A cinematic game launcher that brings your whole library together."
+    },
+    "description": {
+      "ar": "PixelApp يفحص مكتبتك على ويندوز تلقائيًا — Steam و Epic و Xbox / Game Pass و GOG والاختصارات — ثم يعرضها بواجهة سينمائية تصلح للتشغيل بالكيبورد أو يد التحكم. يجلب لكل لعبة غلافًا وخلفية، ويستخرج لونها الأساسي لتصبح الواجهة متناسقة، ويعرض مراجعات Steam وآخر التحديثات. كل شيء يعمل محليًا على جهازك بدون رفع بيانات.",
+      "en": "PixelApp scans your Windows library automatically - Steam, Epic, Xbox / Game Pass, GOG and shortcuts - then presents it in a cinematic interface built for keyboard and gamepad. It fetches a cover and backdrop for every game, extracts its dominant color for a cohesive look, and surfaces Steam reviews plus the latest update news. Everything runs locally on your PC with no data uploads."
+    },
+    "tags": [
+      "Electron",
+      "React",
+      "TypeScript",
+      "Windows"
+    ],
+    "cover": "/img/app/theme-aurora.png",
+    "screenshots": [
+      "/img/app/theme-aurora.png",
+      "/img/app/theme-neon.png",
+      "/img/app/theme-shelf.png",
+      "/img/app/theme-grid.png",
+      "/img/app/detail.png",
+      "/img/app/controllers.png",
+      "/img/app/quick-menu.png",
+      "/img/app/settings.png",
+      "/img/app/search.png"
+    ],
+    "highlights": [
+      {
+        "ar": "فحص تلقائي لمكتبات Steam و Epic و Xbox / Game Pass و GOG.",
+        "en": "Automatic scan of Steam, Epic, Xbox / Game Pass and GOG libraries."
+      },
+      {
+        "ar": "أغلفة وخلفيات حقيقية مع استخراج لون كل لعبة.",
+        "en": "Real covers and backdrops with per-game dominant color."
+      },
+      {
+        "ar": "دعم DualSense و DualShock و Xbox مع اختبار الاهتزاز وإعادة التعيين.",
+        "en": "DualSense, DualShock and Xbox support with vibration test and remapping."
+      },
+      {
+        "ar": "مراجعات Steam وأخبار التحديثات داخل صفحة كل لعبة.",
+        "en": "Steam reviews and update news inside every game page."
+      },
+      {
+        "ar": "ستة ثيمات: Aurora و Noir و Neon و Shelf و Grid و Titan.",
+        "en": "Six themes: Aurora, Noir, Neon, Shelf, Grid and Titan."
+      },
+      {
+        "ar": "واجهة عربية وإنجليزية وفرنسية وإسبانية مع دعم RTL.",
+        "en": "Arabic, English, French and Spanish with full RTL support."
+      }
+    ],
+    "specs": [
+      {
+        "label": {
+          "ar": "الإصدار",
+          "en": "Version"
+        },
+        "value": "1.0.0"
+      },
+      {
+        "label": {
+          "ar": "المنصة",
+          "en": "Platform"
+        },
+        "value": "Windows 10/11 (64-bit)"
+      },
+      {
+        "label": {
+          "ar": "الحجم",
+          "en": "Size"
+        },
+        "value": "~77 MB"
+      },
+      {
+        "label": {
+          "ar": "الترخيص",
+          "en": "License"
+        },
+        "value": "Free"
+      }
+    ],
+    "requirements": [
+      {
+        "ar": "ويندوز 10 أو 11 (64-bit)",
+        "en": "Windows 10 or 11 (64-bit)"
+      },
+      {
+        "ar": "حوالي 250 ميجابايت مساحة فارغة",
+        "en": "About 250 MB of free space"
+      },
+      {
+        "ar": "اتصال إنترنت اختياري للأغلفة والمراجعات",
+        "en": "Optional internet for covers and reviews"
+      }
+    ],
+    "download": {
+      "enabled": true,
+      "api": "api/latest.json",
+      "url": "/download",
+      "file": "PixelApp-Setup-1.0.0.exe",
+      "download": "https://github.com/mahrouzmohamed89-wq/pixelapp/releases/download/v1.0.0/PixelApp-Setup-1.0.0.exe"
+    }
+  }
+}

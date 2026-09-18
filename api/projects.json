@@ -1,0 +1,38 @@
+{
+  "studio": "PixelTeam",
+  "projects": [
+    {
+      "id": "pixelapp",
+      "name": "PixelApp",
+      "accent": "#e87ab9",
+      "featured": true,
+      "category": {
+        "ar": "تطبيق ويندوز",
+        "en": "Windows app"
+      },
+      "categoryKey": "windows",
+      "status": {
+        "ar": "متاح للتحميل",
+        "en": "Available"
+      },
+      "statusType": "stable",
+      "platforms": [
+        "Windows 10/11"
+      ],
+      "releasedAt": "2026-09-01",
+      "version": "1.0.0",
+      "tagline": {
+        "ar": "مشغّل ألعاب بواجهة سينمائية يجمع مكتبتك كلها في مكان واحد.",
+        "en": "A cinematic game launcher that brings your whole library together."
+      },
+      "tags": [
+        "Electron",
+        "React",
+        "TypeScript",
+        "Windows"
+      ],
+      "cover": "/img/app/theme-aurora.png",
+      "downloadable": true
+    }
+  ]
+}

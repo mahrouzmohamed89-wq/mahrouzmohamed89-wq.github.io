@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self'; script-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'"
+    />
+    <title>{{TITLE}}</title>
+    <meta name="description" content="{{DESCRIPTION}}" />
+    <meta name="theme-color" content="#0b1224" />
+    <meta name="author" content="PixelTeam" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{TITLE}}" />
+    <meta property="og:description" content="{{DESCRIPTION}}" />
+    <meta property="og:image" content="{{IMAGE}}" />
+    <link rel="icon" href="/img/favicon.png" />
+    <link rel="apple-touch-icon" href="/img/logo.png" />
+    <link rel="stylesheet" href="/vendor/nes.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body data-page="project" data-project="{{PROJECT_ID}}">
+    <a class="skip-link" href="#projectRoot" data-i18n="nav.skip">تخطَّ إلى المحتوى</a>
+    <div class="bg-layer" aria-hidden="true"></div>
+    <div class="bg-grid" aria-hidden="true"></div>
+
+    <header class="nav" id="siteNav">
+      <a class="brand" href="/">
+        <img src="/img/logo.png" alt="PixelTeam" class="brand__mark" />
+        <span class="brand__name pixel">PixelTeam</span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="/" data-nav="home" data-i18n="nav.home">الرئيسية</a>
+        <a href="/projects" class="is-active" data-nav="projects" aria-current="page" data-i18n="nav.projects">المشاريع</a>
+        <a href="/#about" data-nav="about" data-i18n="nav.about">عن الفريق</a>
+        <a href="/projects" class="nav__links__cta" data-i18n="nav.cta">استعرض المشاريع</a>
+      </nav>
+      <div class="nav__actions">
+        <button type="button" class="lang-toggle pixel" id="langToggle" aria-label="Switch language">EN</button>
+        <a class="nes-btn is-primary nav__cta" href="/projects" data-i18n="nav.cta">استعرض المشاريع</a>
+        <button
+          type="button"
+          class="nav__toggle pixel"
+          id="navToggle"
+          aria-expanded="false"
+          data-i18n-aria="nav.menu"
+        >
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <main id="projectRoot">
+      <section class="page-head page-head--project" id="projectHead" hidden>
+        <nav class="breadcrumb" aria-label="breadcrumb">
+          <a href="/" data-i18n="nav.home">الرئيسية</a>
+          <span>/</span>
+          <a href="/projects" data-i18n="nav.projects">المشاريع</a>
+          <span>/</span>
+          <span class="is-current" id="crumbName">—</span>
+        </nav>
+
+        <div class="project-hero">
+          <div class="project-hero__media">
+            <img id="projectCover" src="/img/og.png" alt="" />
+          </div>
+
+          <div class="project-hero__info">
+            <div class="pills">
+              <span class="pill pill--featured" id="projectFeatured" hidden data-i18n="project.featured">مميّز</span>
+              <span class="pill pill--category" id="projectCategory">—</span>
+              <span class="pill pill--status" id="projectStatus">—</span>
+            </div>
+            <h1 class="project-hero__title pixel" id="projectName">—</h1>
+            <p class="project-hero__tagline" id="projectTagline"></p>
+            <ul class="tags" id="projectTags"></ul>
+
+            <a class="nes-btn is-primary btn-lg project-hero__download" id="projectDownloadBtn" href="#" hidden>
+              <span data-i18n="project.download">تحميل</span>
+            </a>
+            <p class="project-hero__soon" id="projectSoon" hidden data-i18n="project.soon">
+              قيد التطوير — سيكون متاحًا للتحميل قريبًا.
+            </p>
+
+            <dl class="specs" id="projectSpecs"></dl>
+
+            <div class="download-meta" id="projectDownloadMeta" hidden>
+              <div><dt data-i18n="download.version">الإصدار</dt><dd class="pixel" id="metaVersion">—</dd></div>
+              <div><dt data-i18n="download.size">الحجم</dt><dd id="metaSize">—</dd></div>
+              <div><dt data-i18n="download.downloads">مرات التحميل</dt><dd class="pixel" id="metaDownloads">0</dd></div>
+              <div class="download-meta__hash">
+                <dt data-i18n="download.sha">بصمة SHA-256</dt>
+                <dd><code id="metaHash">—</code></dd>
+              </div>
+            </div>
+
+            <div class="project-actions">
+              <a class="back-link" href="/projects">
+                <span data-i18n="project.back">الرجوع إلى المشاريع</span>
+              </a>
+              <button type="button" class="share-btn" id="projectShare" data-i18n="project.share">نسخ الرابط</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projectOverview" hidden>
+        <h2 class="section__title" data-i18n="project.overview">نظرة عامة</h2>
+        <p class="project-text" id="projectDescription"></p>
+      </section>
+
+      <section class="section" id="projectFeatures" hidden>
+        <h2 class="section__title" data-i18n="project.features">أبرز الميزات</h2>
+        <ul class="feature-list" id="projectHighlights"></ul>
+      </section>
+
+      <section class="section" id="projectGallerySection" hidden>
+        <h2 class="section__title" data-i18n="project.gallery">الصور</h2>
+        <p class="section__lead" data-i18n="project.galleryLead">اضغط أي صورة لتكبيرها.</p>
+        <div class="gallery" id="projectGallery"></div>
+      </section>
+
+      <section class="section" id="projectRequirementsSection" hidden>
+        <h2 class="section__title" data-i18n="project.requirements">المتطلبات</h2>
+        <ul class="req req--stack" id="projectRequirements"></ul>
+      </section>
+
+      <section class="section" id="projectOthersSection" hidden>
+        <h2 class="section__title" data-i18n="project.others">مشاريع أخرى</h2>
+        <div class="projects-grid" id="projectOthers"></div>
+      </section>
+
+      <section class="section" id="projectError" hidden>
+        <div class="nes-container is-dark empty-note">
+          <p data-i18n="project.notFound">لم نجد هذا المشروع.</p>
+          <a class="nes-btn is-primary" href="/projects" data-i18n="project.back">الرجوع إلى المشاريع</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span class="footer__watermark pixel" aria-hidden="true">PixelTeam</span>
+      <div class="footer__grid">
+        <div class="footer__col footer__col--brand">
+          <a class="footer__brand" href="/">
+            <img src="/img/logo.png" alt="PixelTeam" class="footer__mark" />
+            <span class="pixel">PixelTeam</span>
+          </a>
+          <p class="footer__about" data-i18n="footer.about">
+            استوديو صغير يبني تطبيقات كاملة — من الفكرة والتصميم إلى الإصدار، بواجهات عربية أصلية.
+          </p>
+        </div>
+        <nav class="footer__col" data-i18n-aria="footer.explore">
+          <h3 class="footer__title pixel" data-i18n="footer.explore">استكشف</h3>
+          <a href="/" data-i18n="nav.home">الرئيسية</a>
+          <a href="/projects" data-i18n="nav.projects">المشاريع</a>
+          <a href="/#about" data-i18n="nav.about">عن الفريق</a>
+        </nav>
+        <nav class="footer__col" data-i18n-aria="footer.product">
+          <h3 class="footer__title pixel" data-i18n="footer.product">المنتج</h3>
+          <a href="/projects/pixelapp" data-i18n="footer.pixelapp">PixelApp</a>
+          <a href="/projects/pixelapp" data-i18n="footer.download">التحميل</a>
+          <a href="/#work" data-i18n="footer.features">الميزات</a>
+        </nav>
+        <div class="footer__col footer__col--cta">
+          <h3 class="footer__title pixel" data-i18n="footer.stay">ابقَ على اطلاع</h3>
+          <p class="footer__cta-text" data-i18n="footer.ctaText">
+            أحدث مشاريعنا وإصداراتنا في مكان واحد.
+          </p>
+          <a class="footer__cta" href="/projects" data-i18n="nav.cta">استعرض المشاريع</a>
+          <div class="footer__release" id="footerRelease" hidden>
+            <span class="footer__release-label" data-i18n="footer.latest">أحدث إصدار</span>
+            <a class="footer__release-card" id="footerReleaseLink" href="/projects/pixelapp">
+              <span class="footer__release-name pixel" id="footerReleaseName">PixelApp</span>
+              <span class="footer__release-meta" id="footerReleaseMeta">-</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__legal">
+          <p class="footer__copy" data-i18n="footer.copy">© 2026 PixelTeam. جميع الحقوق محفوظة.</p>
+          <p class="footer__made" data-i18n="footer.made">صُنع بشغف — بكسل بكسل.</p>
+        </div>
+        <nav class="footer__langs" data-i18n-aria="footer.language">
+          <span class="footer__langs-label" data-i18n="footer.language">اللغة</span>
+          <button type="button" class="footer__lang" data-lang="ar">العربية</button>
+          <span class="footer__langs-sep" aria-hidden="true">/</span>
+          <button type="button" class="footer__lang" data-lang="en">English</button>
+        </nav>
+        <div class="footer__utilities">
+          <a class="footer__status" href="/">
+            <span class="footer__status-dot" aria-hidden="true"></span>
+            <span data-i18n="footer.status">الخدمة تعمل</span>
+          </a>
+          <button type="button" class="footer__top js-to-top" data-i18n="common.top">للأعلى</button>
+        </div>
+      </div>
+      <p class="footer__note" data-i18n="footer.note">
+        جميع الأسماء التجارية والمحتوى المذكور في صفحات المشاريع مملوكة لأصحابها.
+      </p>
+    </footer>
+
+    <div class="lightbox" id="lightbox" hidden>
+      <button type="button" class="lightbox__close pixel" id="lightboxClose" aria-label="Close">✕</button>
+      <button type="button" class="lightbox__nav lightbox__nav--prev pixel" id="lightboxPrev">‹</button>
+      <img alt="" id="lightboxImg" />
+      <button type="button" class="lightbox__nav lightbox__nav--next pixel" id="lightboxNext">›</button>
+      <p class="lightbox__counter pixel" id="lightboxCounter"></p>
+    </div>
+
+    <script id="project-data" type="application/json">{{PROJECT_DATA}}</script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
