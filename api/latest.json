@@ -1,11 +1,11 @@
 {
   "product": "PixelApp",
   "author": "PixelTeam",
-  "name": "PixelApp-Setup-1.0.0.exe",
-  "version": "1.0.0",
-  "size": 80745921,
-  "sha256": "d0f7298b26bed5cc6def4ee8b8b53b332785fe375f18c72c1b533b11cec5a9ac",
-  "releasedAt": "2026-09-18T18:37:24.000Z",
-  "url": "https://github.com/mahrouzmohamed89-wq/pixelapp/releases/download/v1.0.0/PixelApp-Setup-1.0.0.exe",
-  "download": "https://github.com/mahrouzmohamed89-wq/pixelapp/releases/download/v1.0.0/PixelApp-Setup-1.0.0.exe"
+  "name": "PixelApp-Setup-2.0.0.exe",
+  "version": "2.0.0",
+  "size": 82168779,
+  "sha256": "2dd3ec2466ba856dd3b77018c9b0b6da6c8c58ce078671d36a5d29bbd3135f68",
+  "releasedAt": "2026-10-18T23:06:01.000Z",
+  "url": "https://github.com/mahrouzmohamed89-wq/pixelapp/releases/download/v2.0.0/PixelApp-Setup-2.0.0.exe",
+  "download": "https://github.com/mahrouzmohamed89-wq/pixelapp/releases/download/v2.0.0/PixelApp-Setup-2.0.0.exe"
 }
